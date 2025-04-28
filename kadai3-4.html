@@ -23,17 +23,17 @@
                 console.log("商品は以下の" + items.length + "種類です。");
 
                  for(let i = 0; i < a.length; i++){
+                     // 配列の内容を項目毎に出力
                     console.log("商品番号:" +" "+ items.id, "商品名": items.name,"金額":+ " "+ items.price, "在庫数": +" "+items.stock);
-                }// 配列の内容を項目毎に出力
-                // ここにコードを書く
+                }// ここにコードを書く
                 console.log(""); // 空行の出力
             }
 
             // 商品購入の関数
             function buyItem(no) {
                 console.log("商品番号:" +" "+ no, "商品名": items.name,+ " " +"炭酸水を購入します。");
-                if(no <= items.id){
-                    items -= 1;   
+                if(no <= items.stock){
+                    items.stock -= 1;   
                 }
                 else{
                     console.log("在庫がありません。");
